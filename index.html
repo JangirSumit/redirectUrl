@@ -7,7 +7,8 @@
   </head>
   <body>
     <script>
-      window.location.href = getParameterByName("redirectUrl");
+      window.location.href =
+        getParameterByName("redirectUrl") + "/" + getParameterByName("result");
 
       function getParameterByName(name, url) {
         if (!url) url = window.location.href;
