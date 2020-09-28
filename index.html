@@ -7,13 +7,11 @@
   </head>
   <body>
     <script>
-      if (getParameterByName("redirectUrl")) {
+      if (getParameterByName("url")) {
         window.location.href =
-          getParameterByName("redirectUrl") +
-          "/" +
-          getParameterByName("result");
+          getParameterByName("url") + "/" + getParameterByName("result");
       } else {
-        document.write("Pass return URL in query string.");
+        document.write("Pass return URL in query string. Must have 'url' ");
       }
 
       function getParameterByName(name, url) {
