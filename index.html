@@ -7,12 +7,14 @@
   </head>
   <body>
     <script>
+      var URL = "";
       if (getParameterByName("url")) {
-        window.location.href =
-          getParameterByName("url") + "/" + getParameterByName("result");
+        URL += getParameterByName("url");
       } else {
         document.write("Pass return URL in query string. Must have 'url' ");
       }
+
+      window.location.href = URL;
 
       function getParameterByName(name, url) {
         if (!url) url = window.location.href;
